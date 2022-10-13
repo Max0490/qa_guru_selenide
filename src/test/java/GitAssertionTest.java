@@ -20,6 +20,7 @@ public class GitAssertionTest {
         $(".header-search-input").setValue("selenide").pressEnter();
         $$(".repo-list li").first().$("a").click();
         $("#wiki-tab").click();
+        $(".js-wiki-more-pages-link").click();
         $("li.Box-row.wiki-more-pages.px-2.py-2", 1).$("div:nth-child(1)").shouldHave(text("SoftAssertions"));
         $("li.Box-row.wiki-more-pages.px-2.py-2", 1).$("div:nth-child(1)").click();
         $(".markdown-body").shouldHave(text("Using JUnit5 extend test class"));
